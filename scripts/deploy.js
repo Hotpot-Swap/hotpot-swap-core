@@ -1,0 +1,36 @@
+const hre = require("hardhat");
+const { ethers, upgrades } = hre;
+
+const { getContracts, saveContract } = require("./utils");
+
+async function main() {
+  const network = hre.network.name;
+
+  const [deployer] = await ethers.getSigners();
+
+  console.log("Deploying contracts with the account:", deployer.address);
+
+  console.log("Account balance:", (await deployer.getBalance()).toString());
+
+  // impl next deploy upgrades
+  // const hotpotToken = await ethers.getContractFactory("hotpotToken");
+  // const HPT = await upgrades.deployProxy(hotpotToken, []);
+  // await HPT.deployed();
+  // await saveContract(network, 'hotpotToken', HPT.address);
+  // console.log(`Deployed hotpotToken to ${HPT.address}`);
+
+  // imp deploy normal
+  const hotpotToken = await ethers.getContractFactory("HotpotToken");
+  const HPT = await hotpotToken.deploy();
+
+  console.log("Token address:", HPT.address);
+
+  console.log("Completed!");
+}
+
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });

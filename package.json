@@ -4,7 +4,15 @@
   "description": "READM",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy:normal": "hardhat run --network tbsc",
+    "deploy:local": "NODE_ENV=local hardhat run --network tbsc",
+    "deploy:dev": "NODE_ENV=dev hardhat run --network tbsc",
+    "deploy:prod": "NODE_ENV=prod hardhat run --network bsc",
+    "verify:local": "NODE_ENV=local hardhat verify --network tbsc",
+    "verify:dev": "NODE_ENV=dev hardhat verify --network tbsc",
+    "verify:prod": "NODE_ENV=prod hardhat verify --network bsc"
   },
   "repository": {
     "type": "git",
