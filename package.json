@@ -1,0 +1,38 @@
+{
+  "name": "hotpot-swap-core",
+  "version": "1.0.0",
+  "description": "READM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hotpot-Swap/hotpot-swap-core.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hotpot-Swap/hotpot-swap-core/issues"
+  },
+  "homepage": "https://github.com/Hotpot-Swap/hotpot-swap-core#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.7",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "3.1.0-solc-0.7",
+    "@openzeppelin/contracts-upgradeable": "^3.4.1",
+    "@openzeppelin/hardhat-upgrades": "^1.9.0",
+    "@openzeppelin/test-helpers": "^0.5.13",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.1",
+    "hardhat": "^2.6.7",
+    "hardhat-contract-sizer": "^2.1.1"
+  },
+  "dependencies": {
+    "@hotpot-swap/hotpot-swap-lib": "^0.0.1",
+    "@nomiclabs/hardhat-etherscan": "^2.1.7"
+  }
+}
