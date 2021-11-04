@@ -1,5 +1,5 @@
 //SPDX-License-Identifier: MIT
-pragma solidity 0.6.12;
+pragma solidity 0.7.0;
 import "@hotpot-swap/hotpot-swap-lib/contracts/token/BEP20/BEP20.sol";
 
 // HotpotToken with Governance.
@@ -116,7 +116,10 @@ contract HotpotToken is BEP20("Hotpot Token", "HPT") {
             nonce == nonces[signatory]++,
             "HPT::delegateBySig: invalid nonce"
         );
-        require(now <= expiry, "HPT::delegateBySig: signature expired");
+        require(
+            block.timestamp <= expiry,
+            "HPT::delegateBySig: signature expired"
+        );
         return _delegate(signatory, delegatee);
     }
 
@@ -201,7 +204,7 @@ contract HotpotToken is BEP20("Hotpot Token", "HPT") {
                 uint256 srcRepOld = srcRepNum > 0
                     ? checkpoints[srcRep][srcRepNum - 1].votes
                     : 0;
-                uint256 srcRepNew = srcRepOld.sub(amount);
+                uint256 srcRepNew = srcRepOld - amount;
                 _writeCheckpoint(srcRep, srcRepNum, srcRepOld, srcRepNew);
             }
 
@@ -211,7 +214,7 @@ contract HotpotToken is BEP20("Hotpot Token", "HPT") {
                 uint256 dstRepOld = dstRepNum > 0
                     ? checkpoints[dstRep][dstRepNum - 1].votes
                     : 0;
-                uint256 dstRepNew = dstRepOld.add(amount);
+                uint256 dstRepNew = dstRepOld + amount;
                 _writeCheckpoint(dstRep, dstRepNum, dstRepOld, dstRepNew);
             }
         }

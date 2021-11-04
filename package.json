@@ -40,7 +40,7 @@
     "hardhat-contract-sizer": "^2.1.1"
   },
   "dependencies": {
-    "@hotpot-swap/hotpot-swap-lib": "^0.0.1",
+    "@hotpot-swap/hotpot-swap-lib": "^0.0.4",
     "@nomiclabs/hardhat-etherscan": "^2.1.7"
   }
 }

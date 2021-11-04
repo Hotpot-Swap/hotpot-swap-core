@@ -19,12 +19,11 @@ async function main() {
   // await saveContract(network, 'hotpotToken', HPT.address);
   // console.log(`Deployed hotpotToken to ${HPT.address}`);
 
-  // imp deploy normal
+  // imp deploy hotpotToken
   const hotpotToken = await ethers.getContractFactory("HotpotToken");
-  const HPT = await hotpotToken.deploy();
-
-  console.log("Token address:", HPT.address);
-
+  const Token = await hotpotToken.deploy();
+  
+  console.log("Token address:", Token.address);
   console.log("Completed!");
 }
 

@@ -559,10 +559,10 @@
     "@ethersproject/properties" "^5.5.0"
     "@ethersproject/strings" "^5.5.0"
 
-"@hotpot-swap/hotpot-swap-lib@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@hotpot-swap/hotpot-swap-lib/-/hotpot-swap-lib-0.0.1.tgz#f503a96434f1256353abd0c745d492f0a334e8da"
-  integrity sha512-njL6FMN+4/qhAcG2/y6ft8b3mPLJHm8pcCRhavkPQPCJ6qMOJQxJYIS+rqsVFM+3dlFg7t5CW+rIRLH3pnrw3Q==
+"@hotpot-swap/hotpot-swap-lib@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@hotpot-swap/hotpot-swap-lib/-/hotpot-swap-lib-0.0.4.tgz#6780041932cc356a4598e472970f71be29b050c5"
+  integrity sha512-xeAz3CPd5VWDSyfZYVL5+JTOSWMkV5q9Y1NJr7QSzQbbPMHkCGUXL0nFNgH47RUUtDEn/AUwWKP4PplGwe9QiA==
 
 "@nomiclabs/hardhat-ethers@^2.0.2":
   version "2.0.2"
